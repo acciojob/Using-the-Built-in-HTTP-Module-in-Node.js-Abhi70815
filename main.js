@@ -9,6 +9,7 @@ console.log("request receoved");
 
         if(err){
             res.writeHead(500, {'Content-Type': 'text/plain'});
+            console.error("please try again");
             res.end('Error reading file');
         }
         else{
