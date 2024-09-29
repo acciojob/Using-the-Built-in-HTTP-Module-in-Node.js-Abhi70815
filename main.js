@@ -5,7 +5,7 @@ const server = http.createServer((req,res)=>{
     // Get the file path from the command line arguments
 console.log("request receoved");
     const filepath = process.argv[2];
-    fs.readFile(filepath, (err,data)=>{
+    fs.readFile(filepath,"utf8", (err,data)=>{
 
         if(err){
             res.writeHead(500, {'Content-Type': 'text/plain'});
